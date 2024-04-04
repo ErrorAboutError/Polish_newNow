@@ -1,0 +1,129 @@
+﻿<Window x:Class="Polish_newNow.MainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Polish_newNow"
+        xmlns:Menu="clr-namespace:Polish_newNow.Utilites"
+        mc:Ignorable="d"
+        Icon="/Images/GerbPolsky.ico"
+        AllowsTransparency="True" Background="#272B2F"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="MainPage" Height="624" Width="928">
+    <Window.Resources>
+        <FontFamily x:Key="buttonFont">Inter</FontFamily>
+        <SolidColorBrush Color ="Red" x:Key="RedColor" />
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="85*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="{StaticResource RedColor}"
+                CornerRadius="0 20 20 0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Column="0" Grid.Row="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Grid.Row="0">
+                            <Border CornerRadius="10 10 10 10">
+                                <Image  Name="ImgBox" Source="{Binding Path = Avatar}"
+                                Width="56" Height="56"/>
+                            </Border>
+
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Grid.Row="0" >
+                            <TextBox  Style="{DynamicResource TextBoxStyle}" IsReadOnly="True"
+                                x:Name="TextBlockUserName" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"
+                                  Margin="4,12,4,0"  />
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="1" >
+                    <Border CornerRadius="10 10 10 10" Margin="4,0.4,-4.4,0">
+
+                    </Border>
+                    <Label Margin="25"/>
+                    <StackPanel Width="214" Height="64">
+
+                        <Menu:Btn Style="{StaticResource MainButtonStyle}"
+                                  IsChecked="False"  Click="Theory_Click" Background="{StaticResource RedColor}"
+                                  GroupName="MainRadio">
+                            <Grid>
+                                <TextBlock Text="Теория"
+                                           Style="{StaticResource Text_Style}"/>
+                            </Grid>
+                        </Menu:Btn>
+                    </StackPanel>
+
+                    <Label Margin="0"/>
+                    <StackPanel Width="214" Height="64">
+                        <Menu:Btn Style="{StaticResource MainButtonStyle}"
+                                  IsChecked="False" Click="Trainer_Click" Background="{StaticResource RedColor}"
+                                  GroupName="MainRadio">
+                            <Grid>
+                                <TextBlock Text="Тренажёр"
+                                           Style="{StaticResource Text_Style}" />
+                            </Grid>
+                        </Menu:Btn>
+                    </StackPanel>
+
+                    <Label Margin="0"/>
+                    <StackPanel Width="214" Height="64">
+                        <Menu:Btn Style="{StaticResource MainButtonStyle}"
+                                  IsChecked="False" Click="Tests_Click"  Background="{StaticResource RedColor}" GroupName="MainRadio">
+                            <Grid>
+                                <TextBlock Text="Тесты"
+                                           Style="{StaticResource Text_Style}"/>
+                            </Grid>
+                        </Menu:Btn>
+                    </StackPanel>
+
+                    <Label Margin="0"/>
+                    <StackPanel Width="214" Height="64">
+                        <Menu:Btn Style="{StaticResource MainButtonStyle}"
+                                  IsChecked="False" Click="Results_Click" Background="{StaticResource RedColor}"
+                                  GroupName="MainRadio" >
+                            <Grid>
+                                <TextBlock Text="Результаты"
+                                           Style="{StaticResource Text_Style}"/>
+                            </Grid>
+                        </Menu:Btn>
+                    </StackPanel>
+
+                    <Label Margin="0"/>
+                    <StackPanel Width="214" Height="64">
+                        <Menu:Btn Style="{StaticResource MainButtonStyle}"
+                                  IsChecked="False" Click="Dictionary_Click" Background="{StaticResource RedColor}"
+                                  GroupName="MainRadio">
+                            <Grid>
+                                <TextBlock Text="Словарь"
+                                           Style="{StaticResource Text_Style}"/>
+                            </Grid>
+                        </Menu:Btn>
+                        <RadioButton Style="{DynamicResource MainButtonStyle}" Name="Dictionary" Content="Словарь"
+                                 Click="Dictionary_Click" Background="{StaticResource RedColor}"/>
+                    </StackPanel>
+
+                    <Label Margin="25"/>
+                    <Button  Name="Exit" Style="{DynamicResource SpecGoOut}" Content="Выход" 
+                             Click="Exit_Click"/>
+
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Frame Grid.Row="1" Grid.Column="1" Name="AppFrame"
+            NavigationUIVisibility="Hidden" />
+    </Grid>
+</Window>

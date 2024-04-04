@@ -1,0 +1,75 @@
+﻿<Page x:Class="Polish_newNow.Download"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Polish_newNow"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Download">
+    <Page.Resources>
+        <FontFamily x:Key="buttonFont">Inter</FontFamily>
+        <SolidColorBrush Color="GhostWhite" x:Key="button4BackColorGhostWhite">
+        </SolidColorBrush>
+    </Page.Resources>
+
+    <Grid  Background="#272B2F">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <TextBlock Text="Здравствуй, товарищ," FontSize="25" FontWeight="Black" Margin="10,5,5,0"
+                       Foreground="{StaticResource button4BackColorGhostWhite}"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <Label Margin="10"/>
+            <TextBlock Text="ты сможешь познать" FontSize="25" FontWeight="Black" Margin="10,5,5,0"
+                       Foreground="{StaticResource button4BackColorGhostWhite}"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="10,5,5,0">
+            <Label Margin="25"/>
+            <TextBlock Text="польский язык!" FontSize="25" FontWeight="Black"
+                       Foreground="{StaticResource button4BackColorGhostWhite}"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <TextBlock Text="Cześć, towarzyszu," FontSize="25" FontWeight="Black" Margin="50,5,5,0"
+                       Foreground="{StaticResource button4BackColorGhostWhite}"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Label Margin="10"/>
+            <TextBlock Text="możesz wiedzieć " FontSize="25" FontWeight="Black" Margin="50,5,5,0"
+                       Foreground="{StaticResource button4BackColorGhostWhite}"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Label Margin="25"/>
+            <TextBlock Text="Język polski!" FontSize="25" FontWeight="Black" Margin="50,5,5,0"
+                       Foreground="{StaticResource button4BackColorGhostWhite}"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Image Source="/Images/Castle.png" Width="428" Height="263"></Image>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <Label Margin="5"/>
+            <Image Source="/Images/Eda.png" Width="243" Height="184" Margin="-105,5,5,0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Label Margin="5"/>
+            <Image Source="/Images/PolskyGirl.png" Width="286" Height="184" Margin="-190,5,5,0"></Image>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Image Source="/Images/Flag.png" Width="216" Height="208"></Image>
+        </StackPanel>
+
+    </Grid>
+</Page>

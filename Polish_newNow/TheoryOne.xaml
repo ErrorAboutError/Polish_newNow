@@ -1,0 +1,56 @@
+﻿<Page x:Class="Polish_newNow.TheoryOne"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Polish_newNow"
+      mc:Ignorable="d" 
+      d:DesignHeight="624" d:DesignWidth="705"
+      Title="TheoryOne">
+    <ScrollViewer>
+
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="0">
+                <TextBlock Style="{DynamicResource Text_Style_TestAnswer}" Text="Алфавит" FontSize="35">
+                </TextBlock>
+            </DockPanel>
+
+            <DockPanel Grid.Row="1" Margin="5">
+                <Image Source="/Images/AlphabetPolsky.png"/>
+            </DockPanel>
+            <DockPanel Grid.Row="2" Margin="0">
+                <TextBox Name="TextBlock3" Style="{DynamicResource Text_Style_Theory}" TextWrapping="Wrap">
+                </TextBox>
+            </DockPanel>
+            <DockPanel Grid.Row="3" Margin="5">
+                <Image Source="/Images/Diagraphs.png"/>
+            </DockPanel>
+            <DockPanel Grid.Row="4" Margin="0">
+                <TextBox Name="TextBlock4" Style="{DynamicResource Text_Style_Theory}" TextWrapping="Wrap">
+                </TextBox>
+            </DockPanel>
+            <DockPanel Grid.Row="5" Margin="5">
+                <Image Source="/Images/DIacritSymbol.png"/>
+            </DockPanel>
+            <DockPanel Grid.Row="6" Margin="0">
+                <TextBox Name="TextBlock5" Style="{DynamicResource Text_Style_Theory}" TextWrapping="Wrap">
+                </TextBox>
+            </DockPanel>
+            <StackPanel Grid.Row="8">
+                <Button Name="Back" Style="{StaticResource SpecGoOut}" Content="Назад"
+                    Margin="5 25 5 5 " Click="Back_Click">
+                </Button>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

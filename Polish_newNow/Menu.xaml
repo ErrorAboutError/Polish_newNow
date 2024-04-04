@@ -1,0 +1,35 @@
+﻿<Window x:Class="Polish_newNow.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Polish_newNow"
+        mc:Ignorable="d"
+        Icon="/Images/GerbPolsky.ico"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="Menu" Height="624" Width="928">
+    <Window.Resources>
+        <FontFamily x:Key="buttonFont">Inter</FontFamily>
+        <SolidColorBrush Color="#272B2F" x:Key="BlackGrayColor" />
+    </Window.Resources>
+    <Grid Background="{StaticResource BlackGrayColor}">
+        <Button Style="{DynamicResource buttonStyle_3}" Content="Войти"  Name="ComeIn"
+                Margin="44,62,615.6,468.4" 
+                Click="ComeIn_Click"  />
+        <Button Style="{DynamicResource buttonStyle_2}" Content="Регистрация"
+                Name ="Registration"
+                Margin="44,176,622.6,354.4"
+                Click="Registration_Click"  />
+        <Button  Style="{DynamicResource buttonStyle}" Content="Информация"
+                 Name ="Information" 
+                 Margin="44,298,622.6,232.4"
+                 Click="Information_Click"  />
+        <Button  Style="{DynamicResource buttonStyle_4}" Content="Выйти" Name="Go_Out" 
+                 Margin="44,494,620.6,36.4"
+                 Click="Go_Out_Click"  />
+        <Image  Height="536" Width="536" Source="/Images/PolandMap.png"
+                Margin="359,44,33,44"></Image>
+    </Grid>
+</Window>

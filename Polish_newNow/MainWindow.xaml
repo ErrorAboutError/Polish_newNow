@@ -1,0 +1,30 @@
+﻿<Window x:Class="Polish_newNow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Polish_newNow"
+        mc:Ignorable="d"
+        Icon="/Images/GerbPolsky.ico"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="624" Width="928">
+    <Window.Resources>
+        <FontFamily x:Key="buttonFont">Inter</FontFamily>
+        <SolidColorBrush Color="GhostWhite" x:Key="button4BackColorGhostWhite">
+        </SolidColorBrush>
+    </Window.Resources>
+
+    <Grid Background="#272B2F">
+        <TextBlock Text="Здравствуйте!" Foreground="{StaticResource button4BackColorGhostWhite}"  FontSize="25"
+                   FontWeight="Black" Margin="76,119,667.6,450.6"></TextBlock>
+        <TextBlock Text="Cześć![чещч]" Foreground="{StaticResource button4BackColorGhostWhite}"  FontSize="25"
+                   FontWeight="Black" Margin="76,178,595.6,403.6" Width="250"/>
+        <Button  Style="{DynamicResource buttonStyle}" Content="Далее"  Name="Further" Margin="33,233,640.6,288.4" 
+                 Click="Further_Click" />
+        <Button  Style="{DynamicResource buttonStyle_2}" Content="Выйти" Name="GoOut" Margin="33,352,640.6,172.4"
+                Click="GoOut_Click" />
+        <Image  Height="536" Width="536"  Source="/Images/PolandMap.png" Margin="359,44,33,44"></Image>
+    </Grid>
+</Window>

@@ -1,0 +1,114 @@
+﻿<Window x:Class="Polish_newNow.TrainerFirst"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Polish_newNow"
+        mc:Ignorable="d"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None"
+        Icon="/Images/GerbPolsky.ico"
+        WindowStartupLocation="CenterScreen"
+        Height="624" Width="928"
+        Title="TrainerFirst" >
+    <Window.Resources>
+        <FontFamily x:Key="buttonFont">Inter</FontFamily>
+        <SolidColorBrush Color="GhostWhite" x:Key="button4BackColorGhostWhite">
+        </SolidColorBrush>
+    </Window.Resources>
+    <Grid Background="#272B2F">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="251*"/>
+            <RowDefinition Height="51*"/>
+        </Grid.RowDefinitions>
+        <StackPanel
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Margin="0,0,0,0.4" Width="928">
+            <TextBlock Background="#9370DB"
+                Height="100" Width="928"
+                VerticalAlignment="Top" TextWrapping="Wrap"
+                Name="QuestionText" Margin="0 20 0 0">
+                <TextBlock  Margin="25,35,25,25" FontSize="30" Background="#9370DB"
+                    TextWrapping="Wrap" Foreground="{StaticResource button4BackColorGhostWhite}" >
+                1. Где правильно переведена фраза: “Я буду работать” ?
+                </TextBlock>
+            </TextBlock>
+            <RadioButton
+                GroupName="Answers"
+                Margin="36 33 0 0"
+                x:Name="AnswerOne"
+                Checked="AnswerOne_Checked">
+                <TextBlock FontSize="25" Foreground="{StaticResource button4BackColorGhostWhite}"
+                    x:Name="AnswerTextOne"
+                    TextWrapping="Wrap">
+                   Będę pracowałem
+                </TextBlock>
+            </RadioButton>
+            <RadioButton
+                GroupName="Answers"
+                Margin="36 13 0 0"
+                x:Name="AnswerTwo"
+                Checked="AnswerTwo_Checked">
+                <TextBlock FontSize="25" Foreground="{StaticResource button4BackColorGhostWhite}"
+                        x:Name="AnswerTextTwo"
+                        TextWrapping="Wrap">
+                        Będę pracowa
+                </TextBlock>
+            </RadioButton>
+            <RadioButton
+                GroupName="Answers"
+                    Margin="36 11 0 0"
+                x:Name="AnswerThree"
+                Checked="AnswerThree_Checked">
+                <TextBlock FontSize="25" Foreground="{StaticResource button4BackColorGhostWhite}"
+                    x:Name="AnswerTextThree"
+                        TextWrapping="Wrap">
+                      Będziesz pracował
+                </TextBlock>
+            </RadioButton>
+            <RadioButton
+                GroupName="Answers"
+                    Margin="36 11 0 0"
+                   
+                x:Name="AnswerFour"
+                Checked="AnswerFour_Checked">
+                <TextBlock FontSize="25" Foreground="{StaticResource button4BackColorGhostWhite}"
+                    x:Name="AnswerTextFour"
+                        TextWrapping="Wrap">
+                        Będzie pracował
+                </TextBlock>
+            </RadioButton>
+        </StackPanel>
+        <Button 
+            Content="Далее" 
+            Height="84"
+            Margin="0,9,600,0" 
+            Grid.Row="1"
+            Style="{DynamicResource buttonStyle}"
+            Name="NextButton"
+            Click="NextButton_Click">
+        </Button>
+        <DockPanel Grid.Row="1">
+            <Border
+                Margin="290 10 30 0"
+                Width="552"
+                Height="84"
+               
+                BorderThickness="0"
+                Background="#9370DB"
+                CornerRadius="10">
+                <StackPanel>
+                    <ScrollViewer 
+                        HorizontalScrollBarVisibility="Auto" 
+                        VerticalScrollBarVisibility="Disabled"
+                        Margin="8 0 8 5">
+                        <DockPanel VerticalAlignment="Top"
+                                   Name="QuestionsDockPanel">
+                        </DockPanel>
+                    </ScrollViewer>
+                </StackPanel>
+            </Border>
+        </DockPanel>
+    </Grid>
+</Window>

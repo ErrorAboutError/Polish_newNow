@@ -1,0 +1,55 @@
+﻿<Page x:Class="Polish_newNow.Theory"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Polish_newNow"
+      mc:Ignorable="d" 
+      d:DesignHeight="624" d:DesignWidth="705"
+      Title="Theory">
+
+    <ScrollViewer>
+        <Grid Background="#272B2F">
+            <Grid.RowDefinitions>
+                <RowDefinition Height ="*"/>
+                <RowDefinition Height ="*"/>
+                <RowDefinition Height ="*"/>
+                <RowDefinition Height ="*"/>
+                <RowDefinition Height ="*"/>
+                <RowDefinition Height ="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <Label Margin="2"/>
+                <Button Name="ModuleOne" Click="ModuleOne_Click" Style="{DynamicResource StyleBtnInMain}"
+                Content="Алфавит, правила чтения" Width="488" Margin="0,10,0,0"></Button>
+                <Label Margin="0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <Button Name="ModuleTwo" Click="ModuleTwo_Click" Style="{DynamicResource StyleBtnInMain}"
+                Content="Глагол «Быть»" Width="488" Margin="0,20,0,0"></Button>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2">
+                <Button Name="ModuleThree" Click="ModuleThree_Click" Style="{DynamicResource StyleBtnInMain}"
+                Content="Вежливое обращение" Width="488" Margin="0,20,0,0"></Button>
+                <Label Margin="0"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="3">
+                <Button Name="ModuleFour" Click="ModuleFour_Click" Style="{DynamicResource StyleBtnInMain}"
+                Content="Части тела" Width="488" Margin="0,20,0,0"></Button>
+                <Label Margin="0"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="4">
+                <Button Name="ModuleFife" Click="ModuleFife_Click" Style="{DynamicResource StyleBtnInMain}"
+                Content="Времена" Width="488" Margin="0,20,0,0"></Button>
+            </StackPanel>
+            <StackPanel Grid.Row="5">
+                <Button Name="UsefulLinks" Click="UsefulLinks_Click" Style="{DynamicResource StyleBtnInMain}"
+                Content="Полезные ссылки" Width="488" Margin="0,20,0,0"></Button>
+                <Label Margin="5"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>
